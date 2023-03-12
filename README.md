@@ -1,2 +1,2 @@
 # Dart-DonateMe-ReadMeFile
-#ghjfhdfi
+# инициализация
