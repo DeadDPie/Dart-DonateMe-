@@ -1,2 +1,3 @@
-# Dart-DonateMe-ReadMeFile
-# инициализация
+# donate_me
+
+A new Flutter project.
