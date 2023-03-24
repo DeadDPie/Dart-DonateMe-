@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-// void main() {
-//   runApp(const ProfileChangeForm());
-// }
+ void main() {
+   runApp(const ProfileChangeForm());
+ }
 class ProfileChangeForm extends StatelessWidget{
   const ProfileChangeForm({Key? key}) : super(key: key);
 
@@ -11,32 +11,21 @@ class ProfileChangeForm extends StatelessWidget{
     return MaterialApp(
       title: 'Окно профиля пользователя',
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color.fromRGBO(200, 154, 132, 1.0),
-          automaticallyImplyLeading: true,
-          leading: IconButton(
-              icon: const Icon(
-                  Icons.menu,
-                  color: Color.fromRGBO(116, 56, 113, 1.0)
-              ),
-              onPressed:() => Navigator.pop(context, false)),//нужно изменить работу иконки при нажатии
-          centerTitle: true,
-        ),
         backgroundColor: const Color.fromRGBO(241, 227, 211, 1.0),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              TextButton(
-                  onPressed: (){},
-                  child: const Text('ИЗМЕНИТЬ',
-                      style: TextStyle(
-                          color: Color.fromRGBO(116, 56, 113, 1.0),
-                          fontSize: 14.5,
-                          fontWeight: FontWeight.w400,))
-              ),
+              // TextButton(//если будем реализацию с пикчей делать, то раскомментить
+              //     onPressed: (){},
+              //     child: const Text('ИЗМЕНИТЬ',
+              //         style: TextStyle(
+              //             color: Color.fromRGBO(116, 56, 113, 1.0),
+              //             fontSize: 14.5,
+              //             fontWeight: FontWeight.w400,))
+              // ),
               Padding(
-                  padding: const EdgeInsets.fromLTRB(25, 70, 25, 9),
+                  padding: const EdgeInsets.fromLTRB(25, 190, 25, 9),
                   child: TextField(decoration: InputDecoration(
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -96,6 +85,27 @@ class ProfileChangeForm extends StatelessWidget{
               ),
             ],
           ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.check_box_outlined),
+              label: 'Задания',
+              backgroundColor: Color.fromRGBO(116, 56, 113, 1.0),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.menu),
+              label: 'Что-то',
+              backgroundColor: Color.fromRGBO(203, 52, 195, 1.0),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'Настройки',
+              backgroundColor: Color.fromRGBO(146, 106, 86, 1.0),
+            ),
+          ],
+          selectedItemColor: const Color.fromRGBO(194, 59, 187, 1.0),
+          //onTap: _onItemTapped сдеалйте такую функцию или что-то подобное
         ),
       ),
     );
