@@ -1,5 +1,5 @@
 name: donate_me
-description: A new Flutter project.
+description: Team '1 2 3' education project.
 publish_to: 'none'
 version: 0.1.0
 
@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^0.13.5
+  path_provider: ^2.0.14
 
 dev_dependencies:
   flutter_test:

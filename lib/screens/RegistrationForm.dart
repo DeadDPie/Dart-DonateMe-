@@ -55,7 +55,7 @@ class RegistrationForm extends StatelessWidget{
                           width: 5)),
                   fillColor: Colors.white,
                   filled: true,
-                  labelText: 'ВЫБЕРЕТЕ СЕБЕ НИК'
+                  labelText: 'ВЫБЕРИТЕ СЕБЕ НИК'
                 ))
               ),
 
