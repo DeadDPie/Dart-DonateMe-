@@ -30,9 +30,6 @@ class AuthorizationFormState extends State<AuthorizationForm> {
     return MaterialApp(
       title: 'Окно_Авторизации',
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color.fromRGBO(200, 154, 132, 1.0),
-        ),
         backgroundColor: const Color.fromRGBO(241, 227, 211, 1.0),
         body: Center(
           child: Column(

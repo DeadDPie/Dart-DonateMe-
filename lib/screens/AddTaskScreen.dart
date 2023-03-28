@@ -18,7 +18,7 @@ class AddTaskScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const Padding(
-                padding: EdgeInsets.fromLTRB(10, 80, 200, 5),
+                padding: EdgeInsets.fromLTRB(10, 30, 200, 5),
                 child: Text(
                   'ЗАДАНИЕ',
                   style: TextStyle(
@@ -56,7 +56,7 @@ class AddTaskScreen extends StatelessWidget {
                 ),
               ),
               const Padding(
-                padding: EdgeInsets.fromLTRB(10, 40, 200, 0),
+                padding: EdgeInsets.fromLTRB(10, 10, 200, 0),
                 child: Text(
                   'СУММА',
                   style: TextStyle(
@@ -67,7 +67,7 @@ class AddTaskScreen extends StatelessWidget {
                 ),
               ),
               Card(
-                margin: const EdgeInsets.fromLTRB(37, 0, 37, 10),
+                margin: const EdgeInsets.fromLTRB(37, 0, 37, 5),
                 elevation: 5,
                 child: Container(
                   width: 300,
@@ -81,7 +81,7 @@ class AddTaskScreen extends StatelessWidget {
                         maxLines: 1,
                         keyboardType: TextInputType.multiline,
                         decoration: const InputDecoration(
-                            hintText: "Введите задание здесь",
+                            hintText: "Укажите ценность задания",
                             hintStyle: TextStyle(
                               color: Colors.grey,
                               fontSize: 22,
@@ -94,7 +94,7 @@ class AddTaskScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(50, 60, 50, 0),
+                padding: const EdgeInsets.fromLTRB(50, 10, 50, 0),
                 child: OutlinedButton(
                     onPressed: (){},
                     style: OutlinedButton.styleFrom(

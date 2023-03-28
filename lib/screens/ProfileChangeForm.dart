@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
  void main() {
    runApp(const ProfileChangeForm());
  }
+int _selectedIndex = 0;
 class ProfileChangeForm extends StatelessWidget{
   const ProfileChangeForm({Key? key}) : super(key: key);
 
@@ -16,16 +17,16 @@ class ProfileChangeForm extends StatelessWidget{
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              // TextButton(//если будем реализацию с пикчей делать, то раскомментить
-              //     onPressed: (){},
-              //     child: const Text('ИЗМЕНИТЬ',
-              //         style: TextStyle(
-              //             color: Color.fromRGBO(116, 56, 113, 1.0),
-              //             fontSize: 14.5,
-              //             fontWeight: FontWeight.w400,))
-              // ),
+               TextButton(
+                   onPressed: (){},
+                   child: const Text('ИЗМЕНИТЬ',
+                       style: TextStyle(
+                           color: Color.fromRGBO(116, 56, 113, 1.0),
+                           fontSize: 14.5,
+                           fontWeight: FontWeight.w400,))
+               ),
               Padding(
-                  padding: const EdgeInsets.fromLTRB(25, 190, 25, 9),
+                  padding: const EdgeInsets.fromLTRB(25, 140, 25, 9),
                   child: TextField(decoration: InputDecoration(
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -66,7 +67,7 @@ class ProfileChangeForm extends StatelessWidget{
                   ))
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(100, 100, 100, 5),
+                padding: const EdgeInsets.fromLTRB(100, 45, 100, 5),
                 child: OutlinedButton(
                     onPressed: (){},
                     style: OutlinedButton.styleFrom(
@@ -85,27 +86,6 @@ class ProfileChangeForm extends StatelessWidget{
               ),
             ],
           ),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.check_box_outlined),
-              label: 'Задания',
-              backgroundColor: Color.fromRGBO(116, 56, 113, 1.0),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.menu),
-              label: 'Что-то',
-              backgroundColor: Color.fromRGBO(203, 52, 195, 1.0),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: 'Настройки',
-              backgroundColor: Color.fromRGBO(146, 106, 86, 1.0),
-            ),
-          ],
-          selectedItemColor: const Color.fromRGBO(194, 59, 187, 1.0),
-          //onTap: _onItemTapped сдеалйте такую функцию или что-то подобное
         ),
       ),
     );

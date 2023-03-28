@@ -20,22 +20,13 @@ class ChildTasksScreen extends State<ChildTasks> {
     'eat garlic'
   ];
   Color _color1 = const Color.fromRGBO(199, 199, 199, 1.0);
-  final Color _color2 = const Color.fromRGBO(62, 255, 7, 1.0);
+  Color _color2 = const Color.fromRGBO(62, 255, 7, 1.0);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Окно',
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color.fromRGBO(200, 154, 132, 1.0),
-          automaticallyImplyLeading: true,
-          leading: IconButton(
-              icon: const Icon(Icons.notifications_outlined,
-                  color: Color.fromRGBO(116, 56, 113, 1.0)),
-              onPressed: () => Navigator.pop(
-                  context, false)), //нужно изменить работу иконки при нажатии
-        ),
         backgroundColor: const Color.fromRGBO(241, 227, 211, 1.0),
         body: Center(
           child: Column(
@@ -53,20 +44,44 @@ class ChildTasksScreen extends State<ChildTasks> {
               ),
               _list(),
               const Padding(
-                padding: EdgeInsets.fromLTRB(15, 0, 15, 120),
+                padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
                 child: Card(
-                  margin: EdgeInsets.fromLTRB(15, 0, 15, 50),
+                  margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
                   elevation: 5,
                   child: Padding(
                     padding: EdgeInsets.all(15), //отступы текста от карты
                     child: Center(
                       child: Text(
-                        'ваш комментарий из бд вот тут вставляйте-окно изменяется под размер комментария',
-                        style: TextStyle(fontSize: 19),
+                        'ВАНЯ, ТОЛЬКО ПОПРОБУЙ РАЗБИТЬ СЕРВАНТ!',
+                        style: TextStyle(
+                          fontSize: 21, color: Color.fromRGBO(126, 88, 131, 1.0),
+                          fontWeight: FontWeight.w500, fontStyle: FontStyle.italic
+                        ),
                       ),
                     ),
                   ),
                 ),
+              ),
+
+              Padding(
+                padding: EdgeInsets.fromLTRB(15, 20, 15, 50),
+                child: OutlinedButton(
+                  onPressed: (){},
+                  style: OutlinedButton.styleFrom(
+                    backgroundColor: Color.fromRGBO(142, 125, 190, 1.0),
+                    side: const BorderSide(width: 3.0, color: Colors.white),
+                    minimumSize: const Size(300, 80),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)
+                    )),
+                  child: const Text('ВЫПОЛНИЛ!',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0, fontWeight: FontWeight.w800,
+                      fontStyle: FontStyle.normal
+                    ),
+                  ),
+                  ),
               ),
             ],
           ),
@@ -75,9 +90,10 @@ class ChildTasksScreen extends State<ChildTasks> {
     );
   }
 
+  var flag = 0;
   _list() => Expanded(
         child: Card(
-          margin: const EdgeInsets.fromLTRB(30, 20, 30, 80),
+          margin: const EdgeInsets.fromLTRB(30, 20, 30, 40),
           child: Scrollbar(
             child: ListView.builder(
               padding: const EdgeInsets.all(8),
